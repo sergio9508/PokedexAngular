@@ -1,0 +1,76 @@
+@import 'variables';
+
+@mixin poke-container($color) {
+  background-color: $color;
+  color: $white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  img{
+    max-width: 60%;
+  }
+  .text{
+    p{
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    span{
+      background: $color;
+      filter: brightness(110%);
+      padding: 0.5em;
+      border-radius: 10px;
+      color: $white;
+      font-weight: 600;
+      margin: .2em;
+    }
+  }
+}
+
+
+.poke-container{
+  .water{
+    @include poke-container($water);
+  }
+  .fire{
+    @include poke-container($fire);
+  }
+  .grass{
+    @include poke-container($grass);
+  }
+  .bug{
+    @include poke-container($bug);
+  }
+  .ice{
+    @include poke-container($ice);
+  }
+  .normal{
+    @include poke-container($normal);
+  }
+  .poison{
+    @include poke-container($poison);
+  }
+  .electric{
+    @include poke-container($electric);
+  }
+  .rock{
+    @include poke-container($rock);
+  }
+  .ground{
+    @include poke-container($ground);
+  }
+  .psychic{
+    @include poke-container($psychic);
+  }
+  .dragon{
+    @include poke-container($dragon);
+  }
+  .fighting{
+    @include poke-container($fighting);
+  }
+  .fairy{
+    @include poke-container($fairy);
+  }
+  .ghost{
+    @include poke-container($ghost);
+  }
+}

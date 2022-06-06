@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 pokemon-detail">
+      <div class="pokemon-name">
+        <h1>{{pokemon.name}}</h1>
+        <span *ngFor="let type of pokemon.types">
+          {{type.type.name}}
+        </span>
+      </div>
+    </div>
+    <div class="col-12">
+      <img src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="">
+    </div>
+  </div>
+</div>

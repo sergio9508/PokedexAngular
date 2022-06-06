@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center">Pokedex</h1>
+  <div class="form-group row mb-4">
+    <label for="buscar" class="col-sm-2 col-form-label">Buscar</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Buscar Pokemon" [(ngModel)]="name" (ngModelChange)="changeName()">
+      <p>{{name}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 poke-container mb-2"  *ngFor="let poke of pokemons;" (click)="goToDetail(poke.id)">
+      <div ngClass="{{poke.types[0].type.name}}">
+        <img src="{{poke.sprites.other['official-artwork'].front_default}}" alt="">
+        <div class="text">
+          <p>{{poke.name}}</p>
+          <span *ngFor="let type of poke.types;">
+            {{type.type.name}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
