@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-md-4 col-sm-6 poke-container mb-2" *ngFor="let poke of pokemons;" (click)="goToDetail(poke.id)">
       <div ngClass="{{poke.types[0].type.name}}">
-        <img src="{{poke.sprites.other['official-artwork'].front_default}}" alt="">
+        <img src="{{poke.sprites.other['official-artwork'].front_default}}" alt="" loading="lazy">
         <div class="text">
           <p>{{poke.name}}</p>
           <span *ngFor="let type of poke.types;">
